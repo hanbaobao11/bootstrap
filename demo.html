@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>学生登录系统</title>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./demo.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="left-menu">
+      <div class="logo">
+        <img src="./images/logo.png" alt="渡一教育">
+        <span>渡一教育</span>
+      </div>
+      <div class="info">
+        <p>xxx</p>
+        <p>xxxx@qq.com</p>
+        <p><a href="#">退出登录</a></p>
+      </div>
+      <div class="list">
+        <div class="list-group">
+          <a href="#" class="list-group-item disabled">
+            账号管理
+          </a>
+          <a href="#" class="list-group-item">用户信息</a>
+          <a href="#" class="list-group-item">密码修改</a>
+          <a href="#" class="list-group-item disabled">学生管理
+          </a>
+          <a href="#student-info" class="list-group-item">添加学生</a>
+          <a href="#student-list" class="list-group-item">学生信息</a>
+        </div>
+      </div>
+    </div>
+    <div class="right-content">
+      <div class="header">
+        <span id='menu-btn' class="glyphicon glyphicon-list aria-hidden='true'"></span>
+        <b data-toggle="modal" data-target="#user-register">注册</b>
+        <b data-toggle="modal" data-target="#user-load">登录</b>
+        <div class="modal fade" id="user-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+              </div>
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">学号</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="学号">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="姓名">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">性别</label>
+                  <div class="col-sm-6">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="sex" id="optionsRadios2" value="option2">
+                        男
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="sex" id="optionsRadios3" value="option3">
+                        女
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                  <div class="col-sm-6">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">出生年</label>
+                  <div class="col-sm-6">
+                    <input type="date" class="form-control" id="inputPassword3" placeholder="年/月/日">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputPassword3" placeholder="手机号">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">住址</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputPassword3" placeholder="住址">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-2 col-sm-6"></div>
+                  <input class="btn btn-default" type="submit" value="提交">
+
+                </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+          </div>
+        
+        <div class="modal fade" id="user-load" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">登录</h4>
+              </div>
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">用户名</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputPassword3" placeholder="用户名">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                  <div class="col-sm-4">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-2 col-sm-4"></div>
+                  <input class="btn btn-default" type="submit" value="登录">
+
+                </div>
+              </form>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+        <div class="tab-content-item student-info" id="student-info">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">学号</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="学号">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="姓名">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">性别</label>
+              <div class="col-sm-6">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="sex" id="optionsRadios2" value="option2">
+                    男
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="sex" id="optionsRadios3" value="option3">
+                    女
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">出生年</label>
+              <div class="col-sm-6">
+                <input type="date" class="form-control" id="inputPassword3" placeholder="年/月/日">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="手机号">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">住址</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="住址">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-2 col-sm-6"></div>
+              <input class="btn btn-default" type="submit" value="提交">
+
+            </div>
+
+          </form>
+        </div>
+        <div class="tab-content-item student-list" id="student-list">
+          <div class="table-header row">
+            <div class="col-xs-3 col-sm-3 col-md-3">学号</div>
+            <div class="col-xs-3 col-sm-3 col-md-3">姓名</div>
+            <div class="col-xs-3 col-sm-3 col-md-3">手机号</div>
+            <div class="col-xs-3 col-sm-3 col-md-3">操作</div>
+          </div>
+          <div class="table-body">
+            <div class="row">
+              <div class="col-xs-3 col-sm-3 col-md-3">1</div>
+              <div class="col-xs-3 col-sm-3 col-md-3 slid-btn" data-toggle="collapse" data-target="#row1"><span class="glyphicon glyphicon-triangle-bottom">小明</span></div>
+              <div class="col-xs-3 col-sm-3 col-md-3">122222222</div>
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#student-Modal">编辑</button>
+                <button type="button" class="btn btn-danger">删除</button>
+              </div>
+            </div>
+            <div id="row1" class="collapse in">
+              <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-3">性别 男</div>
+                <div class="col-xs-3 col-sm-3 col-md-3">年龄 18</div>
+                <div class="col-xs-3 col-sm-3 col-md-3">邮箱：11111111@qq.com</div>
+                <div class="col-xs-3 col-sm-3 col-md-3">住址：湖北武汉市</div>
+              </div>
+            </div>
+            <div class="modal fade" id="student-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+                  </div>
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">学号</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="学号">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="姓名">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">性别</label>
+                      <div class="col-sm-6">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="sex" id="optionsRadios2" value="option2">
+                            男
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="sex" id="optionsRadios3" value="option3">
+                            女
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                      <div class="col-sm-6">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">出生年</label>
+                      <div class="col-sm-6">
+                        <input type="date" class="form-control" id="inputPassword3" placeholder="年/月/日">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="手机号">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">住址</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="住址">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-2 col-sm-6"></div>
+                      <input class="btn btn-default" type="submit" value="提交">
+
+                    </div>
+                  </form>
+                </div><!-- /.modal-content -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./demo.js"></script>
+</body>
+
+</html>
